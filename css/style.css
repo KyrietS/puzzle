@@ -1,0 +1,171 @@
+/**
+ * Sebastian Fojcik
+ */
+
+body, html {
+    background-color: bisque;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#gameTitle {
+    text-align: center;
+    font-size: 70px;
+    margin: 10px 0;
+}
+
+#mainCanvas {
+    display: block;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.optionBtn {
+    background-color: #3b35b5;
+    font-size: 32px;
+    color: white;
+    margin-left: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+#menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(22, 22, 22, 0.95);
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+#gameMenu {
+    font-size: 128px;
+    margin-top: 20px;
+}
+
+#menuTitle {
+    font-size: 36px;
+}
+
+#menuButton {
+    margin-top: 30px;
+    font-size: 32px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+#menuButton:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Wybierałka rozmiaru planszy */
+#sizeChooser {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border: 1px solid white;
+    display: none;
+    border-collapse: collapse;
+}
+.sizeRow {
+    /*display: flex;*/
+    display: table-row;
+}
+.sizeItem {
+    border: 1px solid white;
+    display: table-cell;
+    box-sizing: border-box;
+}
+
+/* Wybierałka obrazka */
+#imageChooser {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border: 1px solid white;
+    display: none;
+}
+.imageRow {
+    display: flex;
+}
+.imageItem{
+    width: 100px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+.imageItem:hover{
+    cursor: pointer;
+    border: 2px solid orange;
+}
+
+#imagePreview {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(22, 22, 22, 0.95);
+    display: none;
+}
+#imagePreviewItem {
+    margin-top: 50px;
+    max-width: 650px;
+}
+#imagePreviewCloseBtn,
+#imagePreviewChooseBtn {
+    font-size: 48px;
+    padding: 5px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    color: white;
+    border: none;
+    /*margin-top: 20px;*/
+    margin-left: 20px;
+}
+
+#imagePreviewCloseBtn {
+    top: 50px;
+    background-color: rgba(235, 64, 52, 0.5);
+}
+#imagePreviewChooseBtn {
+    top: 150px;
+    background-color: rgba(67, 207, 21, 0.5);
+}
+
+#imagePreviewCloseBtn:hover,
+#imagePreviewChooseBtn:hover {
+    cursor: pointer;
+}
+
+/* Ekran mniejszy niż 480px */
+@media screen and (max-width: 480px) {
+    #gameTitle {
+        font-size: 42px;
+    }
+    #gameMenu {
+        font-size: 42px;
+    }
+    #menuTitle {
+        font-size: 22px;
+    }
+    #imagePreviewItem {
+        margin-top: 0;
+        max-width: 100%;
+    }
+    #imagePreviewCloseBtn,
+    #imagePreviewChooseBtn {
+        margin: 0;
+        right: 0;
+    }
+}

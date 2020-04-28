@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian Fojcik">
+    <title>Układanka</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div id="menu">
+    <h2 id="gameMenu">Menu główne</h2>
+    <h3 id="menuTitle">Wybierz rozmiar układanki</h3>
+    <div id="sizeChooser"></div>
+    <div id="imageChooser"></div>
+    <div id="imagePreview"></div>
+    <button id="menuButton">Dalej</button>
+</div>
+
+<h1 id="gameTitle">Układanka</h1>
+<canvas id="mainCanvas" width="700" height="700">
+    Your browser does not support canvas :(
+</canvas>
+
+<button id="mixBtn" class="optionBtn">Wymieszaj</button>
+<button id="menuBtn" class="optionBtn">Menu</button>
+
+<script src="js/utils.js"></script>
+<script src="js/board.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/swipes.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
